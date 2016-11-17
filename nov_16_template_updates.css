@@ -1,0 +1,1783 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+
+E-ACTIVIST 3.1.05 LAYOUT AND FORMATS
+
+
+
+  _Recent changes_
+
+
+28 Aug 2011
+- Added eaSplitTextfield, eaRadioTextfield style, eaSplitSelectfield
+
+01 Aug 2011
+- Added new layer EAF styling
+
+12 Sept 2011
+- Added eaSplitSelectfield bottom padding
+
+19 Sept 2011
+- Added eaSelectTextfield to base styles
+
+16 Nov 2011
+- Added styles for errors '#eaerrors'
+
+13 Dec 2011
+- Updated eaFullWidthContent to be 98% width ( instead of %100 )
+- Updated eaValidationIcon & eaValidationIconImg in order to fix IE7.
+
+15 Dec 2011
+- Removed styles for errors '#eaerrors'
+
+31 Jan 2012
+- Update EAF styles to use %
+- Remove height from .eaMessageSignoff
+- added vertical-align: middle to .eaQuestionCheckbox input
+
+06 Feb 2012
+- Remove 20px from .eaMessageSalutation
+
+15 Feb 2012
+- adding negative margin top to eaSelectTextfield
+
+24 Feb 2012
+- Added color inherit to eaFormElementLabel a
+
+01 March 2012
+- Removing width from captcha
+
+17 April 2012
+- Added new form field types .eaFormUneditableTextfield, .eaTripleSelectfield, .eaTripleTextfield
+
+19 April 2012
+- Added eaSplitTextfield margin bottom and width
+
+27 April 2012
+- Added .eaSubmitResetButtonGroup .isDisabled for donation page button state
+
+*/
+
+/* campaign body */
+
+
+/* GENERAL STYLES */
+
+/* default font styles */
+
+/*------radio button----------*/
+
+#Direct_Debit_AmountDiv input[type="radio"], #Donation_AmountDiv input[type="radio"] {
+    display: none;
+}
+
+#Direct_Debit_AmountDiv  .eaFormRadio input[type="radio"]:checked + label, #Donation_AmountDiv  .eaFormRadio input[type="radio"]:checked + label {
+    background-color: #BB280A;
+    color: #FFF;
+}
+#Direct_Debit_AmountDiv .eaRadioTextField  {
+    display: inline-block;
+}
+#Direct_Debit_AmountDiv  .eaFormRadio label, #Donation_AmountDiv  .eaFormRadio label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 15px 15px 15px;
+   margin-right: 1.4%;
+width: 11%;
+    font-size: 15px;
+    color: #000;
+    background-color: #f2ede4;
+    overflow: hidden;
+    text-align: center;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(22, 22, 22, 0.35);
+-moz-box-shadow:    1px 1px 5px 0px rgba(22, 22, 22, 0.35);
+box-shadow:         1px 1px 5px 0px rgba(22, 22, 22, 0.35);
+}
+
+.moneybags {margin-top: 15px;}
+/*-----------------END lendwithcare template------------------------*/
+
+#Direct_Debit_AmountDiv br, #Donation_AmountDiv br {display: none;}
+#Direct_Debit_AmountDiv  .eaFormRadio label:hover,  #Donation_AmountDiv  .eaFormRadio label:hover {background-color: #c0c0c0; box-shadow: none;}
+.eaFullWidthContent, .eaLeftColumnContent, .eaRightColumnContent, .eaErrorMessage {
+	font-family: inherit;
+	}
+/*body {
+	margin: 0px;
+	padding: 0px;
+	background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/93/care-header-bg.gif');
+	background-repeat: repeat-x;
+	background-position: left -300px;
+	background-color: #EFE8E6;
+	font-family: Arial, Helvetica, sans-serif;
+}*/
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #f9781c;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:400;
+	padding-bottom: 20px;
+}
+/*-----CARE THEN AND NOW STYLES------*/
+#then-now {background-color: #fff;}
+#then-now p {font-size: 16px;}
+.eaQuestionLabel {width: 30%; float: left; margin-right: 6px; clear: both;}
+#Care_then_and_now_StoryDiv {margin-bottom: 1em; overflow: hidden;}
+.eaQuestionTextArea {height: 140px;}
+#then-now p {
+    font-size: .85em;
+}
+#then-now .eaSubmitButton {
+width: 280px;
+}
+ #then-now p {line-height: 1.55em;}
+
+/*-----END CARE THEN AND NOW STYLES------*/
+.header {
+background-color: #f9781c;
+height: 128px;
+}
+
+/* TWO COLUMN LAYOUT */
+
+.en_left_wrapper {
+	float:left; 
+    width:64%; 
+	}
+.en_right_wrapper {
+	float: right; 
+width: 30%; 
+	}
+.container {
+width: 96%;
+	max-width: 1180px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+}
+.fullwidth {width: 100%; height: auto; max-width: 277px;}
+.right-column img {width: 100%; height: auto; max-width: 277px;}
+.logo {
+	padding-top: 2em;
+	margin-bottom: 1em;
+}
+
+.eaSubmitResetButtonGroup {
+    width: 50%;
+	float:left;
+	position:relative;
+	padding-left:0px;
+	clear:left;
+}
+#Direct_Debit_StartDiv {padding-bottom: 20px;}
+
+
+
+
+.breadcrumb {
+	background-color: #FFFFFF;
+	clear: both;
+	padding-top: 30px;
+margin-left: auto;
+margin-right: auto;
+font-size: 15px;
+
+}
+.breadcrumb a {
+    color: #D56927;
+	text-decoration: none;
+}
+.content {
+	background-color: #FFFFFF;
+	    padding-bottom: 2em;
+		    padding-top: 1.5em;
+			width: 60%;
+			margin: 0 auto;
+}
+.dd-progress {
+	background-color: #F2EDE4;
+	font-family: 'Open Sans', sans-serif !important;
+	padding-top: 9px;
+	padding-right: 15px;
+	padding-bottom: 12px;
+	padding-left: 15px;
+	font-size: .85em;
+	margin-bottom: 30px;
+}
+.progstep {margin-right: 9px;}
+
+.b-crumb strong {
+	color: #E06F1D;
+}
+#email-news-signupDiv .eaMandatoryFieldMarker {display: none;}
+.card-logos {clear: both; margin-top: 5em;
+}
+#Card_logos_NEWDiv {margin-bottom: 2em; clear: both;}
+.card-logos img {margin-right: 7px;}
+#benefits {
+	padding: 0px;
+	list-style-type: none;
+	margin-bottom: 1.5em;
+	font-size: 0.9em;
+	margin-top: 1em;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.food, .water, .health, .sleep {
+padding-top: 15px;
+padding-bottom: 15px;
+background-repeat: no-repeat;
+background-position: left center;
+padding-left: 50px;
+}
+.food {background-image: url("https://donate.careinternational.org.uk/ea-campaign/action.retrievefile.do?ea_fileid=22487");}
+.water{background-image: url("https://donate.careinternational.org.uk/ea-campaign/action.retrievefile.do?ea_fileid=22484");}
+.health {background-image: url("https://donate.careinternational.org.uk/ea-campaign/action.retrievefile.do?ea_fileid=22486");}
+.sleep {background-image: url("https://donate.careinternational.org.uk/ea-campaign/action.retrievefile.do?ea_fileid=22485");}
+.right-column h3 {
+	color: #E06F1D;
+	font-size: 1.5em;
+margin-bottom: 0px;
+}
+h3 strong {font-style: normal;}
+.right-column a {
+	color: #E06F1D;
+}
+#otherways {width: 90%; font-size: 0.85em;padding-left: 15px;}
+#otherways li {padding-bottom: .5em;}
+#footer {
+	background-color: #f2ede4;
+	padding: 25px 0px 29px;
+	background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/93/jagged-edge-orange.png?v=1426245068000');
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+/*------------FOOTER STYLES-------------*/
+#footer ul.menu li {
+	padding-left: 15px;
+	margin-left: 13px;
+	display: inline;
+}
+
+#footer ul.menu li {
+    border-left: 1px solid #D3CEC3;
+}
+#footer .menu {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	float: right;
+}
+#footer ul.menu a {
+    letter-spacing: 1.6px;
+font-family: 'Open Sans Condensed', sans-serif;
+font-size: 14px;
+color: #F9781C;
+text-decoration: none;
+font-weight: 700;
+}
+#footer ul.menu a:hover {
+color: #000;
+}
+
+ #footer ul.menu li:first-child {border: none;}
+
+.copyright-text, ul.menu a:hover{
+    color: #000;
+}
+
+.copyright-text {
+	width: 30%;
+	max-width: 338px;
+	float: left;
+}
+.copyright-text p {
+	font-size: 0.78em;
+line-height: 1.6em;
+}
+/*------------------------END FOOTER STYLES----------------------*/
+.care-ty h1 {text-align: center;}
+.care-ty img {width: 80%; height: auto; margin-left: auto; marging-right: auto;}
+
+.bank-row {
+	clear: both;
+	padding-top: 10px;
+}
+#bank-statement  h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+}
+.start-date {color: #b66611; font-size: 0.9em; padding-top: 30px;}
+.clear {
+	clear: both;
+
+}
+#bank-statement {
+
+}
+#bank-statement  .left {
+	float: left;
+}
+#bank-statement  .right {
+	float: right;
+	padding-left: 15px;
+}
+#bank-statement  .header-row {
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+#bank-statement  .half {
+	width: 48%;
+}
+#bank-statement  .bank-row img {
+	float: right;
+}
+#bank-statement  p {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	line-height: 1.4em;
+}
+.menu-nav {
+	margin: 0px;
+	list-style-type: none;
+	float: right;
+	width: 55%;
+	padding: 0px;
+}
+.menu-nav li {
+	display: inline;
+	font-size: 11px;
+	margin-right: 5px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #E99556;
+	padding-right: 5px;
+}
+#footer li:last-of-type {
+	margin-right: 0px;
+	border-right-style: none;
+	padding-right: 0px;
+}
+.menu-nav a {
+	color: #FFFFFF;
+}
+.secure-mobile {margin-bottom: 20px;}
+#PostcodeDiv {}
+#PostcodeDiv .eaValidationIcon
+{
+    display: none;
+}
+
+#PostcodeDiv .eaFormTextfield, #PostcodeDiv .eaFormField
+{
+width: 50%;
+}
+
+
+#Postcode_lookupDiv 
+{
+top: 0PX;
+left: 110px;
+width: 50px;
+z-index: 1000;
+background-color: #FFF;
+margin-left: -180px;
+float: left;
+POSITION: RELATIVE;
+}
+#Postcode_lookupDiv select
+{
+   z-index: 1001;
+   left: -113px;
+   position: absolute;
+   top: 30px;
+   border: 3px solid black;
+   padding: 5px;
+   width: 300px !important;
+}
+#Address_1Div {clear: both;}
+#pcaDivNZ93{
+position: absolute;
+}
+#Postcode {width: 120px !important;}
+ #PostcodeDiv	.eaFormElementLabel {
+	
+ }
+ #Where_did_you_hear_about_usDiv {padding-top: 1em;
+clear: both;}
+/* input fields */
+
+.eaFormTextfield, .eaFormSelect, .eaFormZipTextfield, .eaFormZipExtTextfield, .eaFormTextArea, .eaQuestionTextfield, .eaQuestionTextArea, .eaMessageSalutation, .eaMessageContent, .eaMessageSignoff, .eaMessageSubject, .eaFriendFormTextfield, .eaSenderMailTemplateSalutation, .eaSenderMailTemplate, input #Donation_amountOther, #Donation_amountOther, .eaQuestionSelect, .eaSplitTextfield, .eaRadioTextfield, .eaSplitSelectfield, .eaSelectTextfield, .eaFormUneditableTextfield, .eaTripleSelectfield, .eaTripleTextfield {
+	/*font-family: Arial, Helvetica, sans-serif;
+	background-color:#f9f9f9;
+	border: 1px solid #666666;
+	color: #666666; 
+	margin:1px 0px; 
+	padding:2px; */
+	
+	font-family: inherit;
+	font-size: inherit;
+	padding: 10px;
+	border: 1px solid #B9B9B9;
+	margin-left: 0;
+	background-color: #F8F8F8;	/*border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px; */
+	}
+	
+#Donation_AmountDiv .eaFormElementLabel, 
+#Recurring_PaymentDiv .eaFormElementLabel
+{
+   width: auto;
+}
+
+.eaFormTextfield:focus, .eaFormTextArea:focus, .eaQuestionTextfield:focus, .eaQuestionTextArea:focus, .eaMessageContent:focus, .eaMessageSalutation:focus, .eaMessageSignoff:focus, .eaMessageSubject:focus, .eaFriendFormTextfield:focus, .eaSenderMailTemplateSalutation:focus, .eaSenderMailTemplate:focus, .eaFormSelect:focus, .eaQuestionSelect:focus, .eaSplitTextfield:focus, .eaRadioTextfield:focus, .eaSplitSelectfield:focus, .eaSelectTextfield:focus, .eaFormUneditableTextfield:focus, .eaTripleSelectfield:focus, .eaTripleTextfield:focus {
+	border: 1px solid #333333;
+	background-color:#FFFFFF;
+	}
+
+/* links */
+
+.eaSwitchCopyLink, .eaBiographyLink, .eaContactLink {
+	color: #000000;
+	}
+
+
+/* ONE COLUMN LAYOUT */
+.eaFullWidthContent {width: 100%;
+position: relative;
+clear: both;
+margin-left: auto;
+margin-right: auto;}
+
+.thankyoupage {width: 80%; text-align: center: margin-left: auto; margin-right: auto;}
+
+
+/* this is the space when leaving a gap in the design page */
+
+.eaTwoColumnFiller{
+	height: 20px;
+	width:100%;
+	position:relative;
+	clear:both;
+	}
+	.eaRightColumnFiller {display: none;}
+/* ajax content */
+
+.eaAjaxContent{
+	float:left;
+	width:100%;
+	position:relative;
+	clear:both;
+	}
+
+
+
+
+/* these are the spaces when leaving a gap in the design page */
+
+
+/* CAMPAIGN FORM */
+
+/* text label */
+	
+	.eaFormElementLabel, .eaQuestionLabel {
+	width: 30%;
+float: left;
+position: relative;
+margin-left: 0px;
+margin-bottom: 10px;
+margin-right: 10px;
+font-size: 1.05em;
+clear: both;
+ }
+ #Donation_AmountDiv .eaFormElementLabel, #Recurring_PaymentDiv .eaFormElementLabel{
+width: 25%;
+}
+
+ 
+ /*#Email_opt_inDiv .eaFormElementLabel, #SMS_opt_inDiv .eaFormElementLabel {width:130px;}*/
+ 
+ .eaFormElementLabel a, .eaFormElementLabel a:active {
+	 color: inherit;
+ }
+	
+/* textfield */
+
+.eaFormTextfield, .eaQuestionTextfield {
+	width: 80%;
+	margin-bottom: 10px;
+
+}
+
+/* three split text field */
+.eaTripleTextfield
+{
+	width: 40px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+.eaFormSelect, .eaQuestionSelect 
+{		
+	margin-bottom: 10px;
+	width: 83%;
+}
+		
+.eaSplitTextfield
+{
+	margin-bottom: 10px;
+	width: 90px;
+}
+
+.eaTripleSelectfield
+{
+	margin-bottom: 10px;
+}
+/*
+#OtherInput, #otherInput   {
+padding: 12px;
+position: absolute; top: 20px;}
+*/
+#OtherInput, #otherInput   {
+	position: absolute;
+	top: 25px;
+	 right: 25px;
+	background-image: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/93/sterling.png?v=1432720796000');
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-top: 8px;
+	padding-right: 12px;
+	padding-bottom: 8px;
+	padding-left: 20px;
+	width: 70px;
+}
+
+#Payment_TypeDiv {margin-top: 25px;}
+/* textarea */
+
+.eaFormTextArea {
+	width: 200px;
+	height: 120px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	}
+
+
+/* radio button */
+
+.eaFormRadio {}
+
+.eaRadioTextfield
+{
+   margin-top: -5px;
+}
+
+
+/* checkbox */
+
+.eaFormCheckbox {}
+
+/* select */
+
+
+.eaSelectTextfield {
+	margin-top: -5px;
+}
+
+/* CAMPAIGN QUESTIONS */
+
+/* text label */
+
+
+/* textfield container */
+
+
+/* campaign question text form field container*/
+.eaQuestionTextfieldFormFieldContainer {float:left;width: 65%;position:relative;}
+/* campaign question textarea form field container*/
+.eaQuestionTextareaFormFieldContainer {float:left;width:65%;position:relative;}
+/* campaign question select form field container*/
+.eaQuestionSelectFormFieldContainer {float:left;width: 65%;position:relative;}
+/* campaign question checkbox form field container*/
+.eaQuestionCheckboxFormFieldContainer {width: 65%;
+float: left;
+	
+}
+#CARE_Then_and_Now_-_Contact_me_firstDiv .eaQuestionCheckboxFormFieldContainer {width: 100%;
+float: none; clear: both;
+	
+}
+.eaQuestionCheckbox input {
+    margin-right: 5px;
+   /* vertical-align: middle;
+    position: absolute;
+    bottom: 0px;
+    right: -25px;*/
+}
+
+/* campaign question radio form field container*/
+.eaQuestionRadioFormFieldContainer {width: 65%;
+float: left;}
+ .eaQuestionRadio label {
+font-size:1em;
+}
+/* textfield */
+
+
+
+
+/* textarea */
+
+.eaQuestionTextArea {
+	height: 70px;
+	width: 80%;
+	overflow-y:auto;
+	overflow-x:hidden;
+	}
+
+
+/* radio button */
+
+.eaQuestionRadio {}
+
+/* checkbox */
+
+.eaQuestionCheckbox {font-size: 1em;}
+
+
+/* select */
+
+.eaQuestionSelect {}
+
+
+/* INSTRUCTION TEXT */
+
+/* form instruction  */
+
+.eaFormInstruction {
+width: 370px;}
+
+/* issue text */
+
+.eaIssue {}
+
+/* letter instruction text */
+
+.eaLetterInstruction {}
+
+/* other instruction text */
+
+.eaOtherInstruction {}
+
+/* send instruction text */
+
+.eaSendInstruction {}
+
+
+
+/* MESSAGE */
+
+/* subject line container */
+
+.eaMessageSubjectContainer {
+	padding-bottom:5px;
+	float:left;
+	clear:left;
+	position:relative;
+	width: 98%;
+	}
+
+/* subject line */
+
+.eaMessageSubject {
+	width: 100%;
+	}
+
+/* message content container */
+
+.eaMessageContentContainer {
+	float:left;
+	clear:left;
+	position:relative;
+	
+
+	background-color:#f9f9f9;
+
+	color: #666666; 
+	margin:1px 0px; 
+	padding:2px;
+	padding-left: 0px;
+	width: 98%;
+	}
+
+/* message content */
+
+.eaMessageContent {
+	width:100%;
+	height:250px;
+	overflow-x: hidden;
+	}
+
+.eaMessageCharacterCount { display:none; }
+
+
+/* Email a Friend subject */
+.eaSwitchSubjectContainer {
+	width: 80%;
+}
+
+
+
+/* salutation container */
+
+.eaMessageSalutationContainer {
+	padding-bottom:5px;
+	float:left;
+	clear:left;
+	width: 350px;
+	position:relative;
+	}
+
+/* salutation */
+
+.eaMessageSalutation {
+	width:350px;
+	overflow: hidden;
+	}
+
+/* signoff container */
+
+.eaMessageSignoffContainer {
+	padding-top:5px;
+	float:left;
+	clear:left;
+	position:relative;
+	}
+
+/* signoff */
+
+.eaMessageSignoff {
+	width:250px;
+	overflow: hidden;
+	}
+
+
+/* SWITCH COPY */
+
+/* instruction text */
+
+.eaSwitchCopyInstruction {}
+
+
+
+/* container for switch copy links */
+
+.eaSwitchCopyLinksContainer {
+	float:left; 
+	width:100%; 
+	position:relative; 
+	padding-left:20px; 
+	padding-top:10px;
+	}
+
+
+/* CONTACTS */
+
+/* select contact instruction text */
+
+.eaSelectContactInstruction {}
+
+/* container for contacts */
+
+.eaContactsContainer {
+	float:left; 
+	width: 95%;
+	position:relative; 
+	padding:10px; 
+	background-color:#F9F9F9;
+	margin-top:10px;
+	}
+	
+/* contact name container */
+
+.eaContactNameContainer{
+	float:left; 
+	position:relative;
+	clear:left;
+	font-weight:bold;
+	padding-right:10px;
+	width:48%;
+	height:25px;
+	}
+
+/* contact organization container */
+
+.eaContactOrgContainer{
+	/*float:left; 
+	position:relative;
+	padding-right:20px;
+	padding-top:4px;
+	font-weight:bold;
+	width:50%;
+	height:25px;
+margin-left: 210px;*/
+	float:left; 
+	width:48%; 
+	position:relative;
+	
+	}
+
+/* contact biographyLink container */
+
+.eaContactBiographyLinkContainer{
+	float:left;
+	position:relative;
+	font-weight:bold;
+	height:25px;
+	padding-top:4px;
+	width:125x;
+	}
+
+/* contact biography container */
+
+.eaContactBiographyContainer{
+	float:left; 
+	position:relative;
+	width: 90%;
+	clear:left;
+	padding-left:0px;
+	padding-right:0px;
+	}
+
+/* contact biography list */
+
+.eaContactBiographyList{
+	float:left; 
+	position:relative;
+	width:350px;
+	margin-top:20px;
+	}
+
+/* contact biography line container */
+
+.eaContactBiographyLineContainer{
+	clear:left;
+	padding-left:0px;
+	padding-bottom:5px;
+	list-style-type: disc;
+	}
+	
+.eaContactBiographyPictureContainer {
+	float:left;
+	position:relative;
+	width:125px;
+	}		
+
+/* contact select checkbox */
+
+.eaContactSelectCheckbox {
+	color: #666666;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+margin-right: 5px;
+}
+
+/* Multiple contact tabbed list */
+/* container for a contact */
+.eaContactContainer {float:left; width:98%; position:relative; padding-left:5px; margin-bottom:10px; padding-top:10px; padding-bottom:10px; border:1px solid #e6e6e6; background-color: #fff;
+}
+/* container for a contact's detail */
+.eaContactDetailContainer {float:left; width:98%; position:relative; padding-top:10px; padding-left:5px;clear:left; margin-top: 10px;}
+/* container for a contact's issue comments */
+.eaContactCommentContainer {position:relative;float:left;clear:left;margin-left:0px; width:98%; padding-top:10px; padding-left:10px;border:1px solid #bfbfbf;height:200px; overflow:auto;}
+/* contact issue status icon container */
+.eaContactIssueStatusContainer {position:relative;float:right;padding-right:10px;}
+/* contact party container */
+.eaContactPartyContainer{float:left; clear:both; margin-left:200px; width:200px; top:-10px;position:relative;padding-left:10px;}
+/* contact position container */
+.eaContactPositionContainer{float:left; width:50%;position:relative;padding-left:0px;}
+.contactTabContent{
+padding-left: 5px;
+padding-bottom: 5px;
+width: 95%;
+}
+
+/* SEND OPTIONS */
+
+.eaSendOptionsContainer {
+	float:left; 
+	width:100%; 
+	position:relative; 
+	padding-left:20px; 
+	padding-top:10px;
+	}
+
+.eaSendOptionRadio 
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+/* SUBMIT/RESET BUTTONS */
+
+/* submit/reset buttons position */
+
+
+.eaSubmitButton, .eaResetButton {
+	color: #333333; 
+	background-color: #FFFFFF; 
+	
+	font-size: 15px;  
+	border: 1px solid #333333;
+	font-weight:normal; 
+	padding: 3px 5px; 
+	border: 1px solid #ccc; background: #f1eeea;
+	cursor:pointer;cursor:hand
+	
+
+	}
+
+/* Hack for IE6 */
+ .eaResetButton {
+_margin-top: -18px;
+}
+
+/* Disabled state */
+.eaSubmitResetButtonGroup .isDisabled
+{
+	border: 1px solid #ccc; 
+	color: lightgrey;
+}
+	
+
+/* RECEIPIENT AND SENDER BLOCKS */
+
+.eaRecipientBlock{
+	float:left; 
+	width:300px; 
+	position:relative;
+	padding-right:10px;
+	font-weight:bold;
+	margin-top:0px;
+	margin-bottom:10px;
+	}	
+.eaSenderBlock {
+	float:left; 
+	width:200px; 
+	position:relative;
+	padding-left:0px;
+	font-weight:bold;
+
+	margin-top:10px;
+	margin-bottom:10px;
+	clear:both;
+}
+
+
+/* THANK YOU PAGE */
+
+.eaThankPage {}
+
+
+/* EMAIL A FRIEND STYLES */
+
+/* content containers */
+
+.eaFriendFormFieldContainerLeft{
+	float:left; 
+	width:200px; 
+	position:relative; 
+	padding-left:0px; 
+	padding-top:0px;
+	}
+
+.eaFriendFormFieldContainerRight{
+	float:left; 
+	width:120px; 
+	position:relative;
+	padding-left:0px; 
+	padding-top:0px;
+	clear:right;
+	}
+
+/* friend form label */
+
+.eaFriendFormLabelLeft {
+	width:140px;
+	float:left;
+	position:relative;
+	margin-left:0px;
+	float:left;
+clear:left;
+padding-right:5px;
+margin-bottom: 10px;
+	}
+
+.eaFriendFormLabelRight {
+	width:120px;
+	padding-top:0px;
+	float:left;
+	float:left;
+	padding-right: 5px;
+	margin-bottom: 10px;
+	margin-left: 50px;
+
+	}
+
+/* email friend form text field */
+
+.eaFriendFormTextfield {
+	width: 100%; 
+	margin-bottom: 5px;
+	}
+
+/* sender email (email a friend) content container */
+
+.eaSenderMailTemplateContainer{
+	float:left;
+	clear:left;
+	position:relative;
+	width: 98%;
+	}
+
+/* sender email (email a friend) textarea */
+
+.eaSenderMailTemplate {
+	
+	height: 250px;
+	width: 100%;
+	}
+
+/* sender email salutation text field */
+
+.eaSenderMailTemplateSalutation {
+	width: 180px; 
+}
+
+/* ERROR MESSAGES */
+
+
+
+.eaAjaxErrorMessageContainer {
+	text-align: left;
+	margin-left:20px;
+	}
+	
+.eaMandatoryFieldMarker {
+	color:#FF0000;
+	}
+	
+	
+	/* Second style set */ 	
+	
+	
+	/* CONTENT CONTAINERS */ 
+
+
+
+/* div area for form field */
+.eaFormField { float:left; width: 65%; }
+#Gift_Aid_TickboxDiv .eaFormField { float:none; width: 100%; clear: both; }
+
+
+/* label spacer used to reserve label space to left of form field when mixing field label positions.
+ * this should be set to match the width and padding of eaFormElementLabel style if any left side labels are used.
+ * if all form field labels are on left, the spacer has no effect 
+ */
+.eaLabelSpacer {
+padding-right:5px;
+float:left;
+margin-top:5px;
+position:relative;
+}
+
+
+/* thank page */
+.eaThankPage {}
+
+/*error messages*/
+.eaErrorMessage {
+	color: #FF0000;
+	font-weight:bold;
+	margin-top:0px;
+	margin-bottom: 0px;
+	padding-left:0px;
+	clear: both;
+	font-size: 0.85em;
+	width: 80%;
+}
+
+.eaFieldErrorHighlightColor {
+   background-color:red;
+   padding: 10px;
+color: white;
+margin-bottom: 10px;
+}
+
+.eaValidationIcon {
+    display: inline;
+    position: relative;
+	padding-left: 5px;
+    *margin-top: -30px;
+    *display: inline-block;
+    *margin-left: 4px;
+}
+
+.eaValidationIconImg
+{
+  float: right;
+  padding-top: 0px;
+  margin-top: 4px;
+  width: 20px;
+  height: 20px;
+  *float: none;  /* IE7 Fixes */
+  *margin-top: 2px;
+}
+
+/*
+Old styles - delete in next revision
+.eaValidationIcon {
+   width:20px;
+   padding-right:5px;
+}
+
+.eaValidationIconImg {
+   height:20px;
+   width:20px;
+   border:0px;
+   float: right;
+}
+*/
+
+.eaAjaxErrorMessageContainer {
+
+text-align: left;
+
+color: #ff0000;
+margin-left:20%;
+}
+
+
+
+/* container for contacts */
+
+.eaContactContainer {float:left; width:98%; position:relative; padding-left:5px; margin-bottom:10px; padding-top:10px; padding-bottom:10px; border:1px solid #e6e6e6; background-color: #fff;
+}
+
+/* ======  additional styles for new contact list ===== */
+/* container for a contact */
+
+
+
+/* container for send options */
+.eaSendOptionsContainer {float:left; width:100%; position:relative; padding-left:20px; padding-top:10px;}
+
+
+
+
+/* mandatory field marker */
+.eaMandatoryFieldMarker {color:#ff0000;}
+
+/* campaign ajax content */
+.eaAjaxContent{float:left; width:100%; position:relative;clear:both;}
+
+
+
+
+/* captcha form container */
+.ea_captcha_container{
+   float:left;
+   border:1px solid;
+   padding-left:10px;
+   margin-left:10px;
+}
+
+.eaCaptchaTextFieldContainer {float:left;width:200px;margin-top:10px;position:relative;clear:both}
+
+/* message character count container */
+.eaMessageCharacterCount {
+   float:left;
+   position:relative;
+   text-align:right;
+   width:300px;
+}
+
+.issueicon {border:0px;height:30px;width:30px;}
+
+.eaErrorMessageHide {
+   display:none;
+}
+
+
+/*
+   EA Errors that appear and the top of the page
+*/
+#eaerrors
+{
+    /*background: none repeat scroll 0 0 #FFBABA;
+    border-bottom: 1px solid #C37A19;
+    border-top: 1px solid #C37A19;*/
+    color: #D8000C;
+    padding: 10px;
+}
+
+#eaerrors a, #eaerrors h1
+{
+   color: #D8000C;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+/* Email a Friend form styles */
+
+
+/* Form name is assumed */
+form[name='EAF Form_1'] .eaFormElementLabel, #ea\.friend\.emailDiv .eaFormElementLabel
+{
+	margin-top: 5px;
+	min-width: 110px;
+}
+
+/* style for single column */
+form[name='EAF Form_1'] .eaFormElementLabel, #ea\.friend\.emailDiv .eaFormElementLabel
+{
+	clear: left;
+}
+
+#ea\.friend\.emailDiv
+{
+	max-width: 600px;
+}
+
+
+#ea\.friend\.emailDiv .eaFormField
+{
+	width: 200px;
+	margin-right: 100px;
+}
+/* style for single column end */
+
+
+form[name='EAF Form_1'] .eaFormElementLabel, #ea\.friend\.emailDiv .eaLeftColumnContent .eaFormElementLabel
+{
+	clear: left;
+}
+
+#ea\.friend\.emailDiv .eaLeftColumnContent .eaFormElementLabel
+{
+	clear: none;
+	width: 110px;
+}
+
+
+#ea\.friend\.emailDiv .eaLeftColumnContent, #ea\.friend\.emailDiv .eaRightColumnContent
+{
+	width: 49%;
+}
+
+#ea\.friend\.emailDiv .eaLeftColumnContent .eaFormField
+{
+	width: 48%;
+	margin-right: 0px;
+}
+
+
+#ea\.friend\.emailDiv .eaRightColumnContent .eaFormElementLabel
+{
+	width: auto;
+}
+
+#ea\.friend\.emailDiv .eaRightColumnContent .eaFormField
+{
+	width: 45%;
+	margin-right: 0px;
+}
+
+
+/* Captcha */
+
+
+#captchaDiv .eaFormElementLabel
+{
+  display: none;
+}
+/*
+#Postcode_lookupDiv 
+{
+top: -33px;
+left: 278px;
+width: 50px;
+z-index: 1000;
+background-color: #FFFFFF;
+}*/
+
+
+.dd-review-box {
+	padding: 8px;
+	border: 1px solid #CCCCCC;
+	background-image: url('https://e-activist.com/ea-campaign/action.retrievefile.do?ea.client.id=93&ea_filename=dd-logo.gif');
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+.pay-review-box {
+	padding: 8px;
+	border: 1px solid #CCCCCC;
+}
+
+#Gift_Aid_TickboxDiv   .eaFormElementLabel  {
+	width: 100%;
+}
+
+#Gift_Aid_TickboxDiv .eaFormCheckbox label {
+	font-weight: bold;
+}
+#Gift_Aid_TickboxDiv .eaFormCheckbox label {
+   
+}
+
+#Gift_Aid_TickboxIcon.eaValidationIcon, #Email_opt_inIcon.eaValidationIcon, #SMS_opt_inIcon.eaValidationIcon {
+display:none;
+}
+/*----style for progress area ------*/
+.orange {
+	color: #E06F1D;
+	font-weight: bold;
+}
+.progress {
+
+}
+h2.progress {
+	font-size: 15px;
+}
+
+
+/*---------styles from html template  ------------------*/
+
+/*
+#Donation_AmountDiv, #Direct_Debit_AmountDiv {
+	border: 1px solid #E06F1D;
+	margin-bottom: 15px;
+	margin-top: 10px;
+	border-radius: 8px 8px 8px 8px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+}*/
+#Donation_AmountDiv, #Direct_Debit_AmountDiv {
+	margin-bottom: 10px;
+	margin-top: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #f9781c;
+	border-bottom-color: #f9781c;
+	overflow: hidden;
+	position: relative;
+}
+
+.right-column-content{
+width: 325px;
+padding: 0 20px 0 10px;
+float: right;
+}
+
+form{
+
+}
+
+.secure{
+position: relative;
+margin-top: 25px;
+margin-bottom: 20px;
+clear:both;
+}
+
+.everypound {margin-top: 15px;}
+.ja-box-bl{
+position: relative;
+padding-bottom: 80px;
+}
+td {
+    padding: 0px 15px;
+}
+
+.eaSubmitButton, .submitbutton{
+background-color: #B6231B;
+display: inline-block;
+padding: 11px 15px 7px;
+font-family:"OfficinaSerifITCW01-XBo_734546" !important;
+font-size: 30px;
+color: #FFF;
+text-transform: uppercase;
+text-align: center;
+border: medium none;
+cursor: pointer;
+width: 260px;
+margin-top: 1.5em;
+margin-bottom: 2em;
+-webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.43);
+-moz-box-shadow:    3px 3px 5px 0px rgba(50, 50, 50, 0.43);
+box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 0.43);
+    text-decoration: none;
+}
+#submit {padding-top: 30px;}
+
+.eaSubmitButton:hover, .submitbutton:hover {
+	background-color: #801813;
+	box-shadow: none;
+}
+
+
+.eaFormElementLabel a {color: #000000;}
+
+.eaResetButton{
+display: none;
+}
+h1, h2, h3, h4, h5 {font-family:"OfficinaSerifITCW01-XBo_734546" !important;}
+h1{
+ color: #000000;
+    
+    font-weight: bold;
+    line-height: 1.2;
+font-size: 2.2em;
+margin: 0 0 20px;
+/*border-bottom: 1px solid #B66611;*/
+}
+h3 {clear: both;}
+.en_left_wrapper h3 {
+    font-size: 1.1em;
+	font-family: 'Open Sans', sans-serif !important;
+font-weight: bold;
+}
+.underline{
+color: #E06F1D;
+/*border-bottom: thin solid #B66610;*/
+
+}
+h4{
+font-weight: normal;
+}
+#CVVDiv{
+padding-top: 10px;
+clear: both;
+}
+
+.eaFullWidthContent .eaErrorMessage{
+display: none;
+}
+
+p{
+font-size: 14px; clear: both; margin-bottom: 0px;
+}
+
+h1, h2, h3, h4, .contentheading, .componentheading, .blog_more strong, table.contenttoc th, .nftitle, #ja-mainnav {
+    
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+#Gift_AidDiv label{
+font-weight: bold;
+}
+
+.eaRadioTextfield {
+    width: 40px;
+}
+#Direct_debit_bottom_comment_dcDiv{
+width: 477px;
+}
+
+
+#Donate_now_buttonDiv, #Next_step_buttonDiv, #One_more_buttonDiv, #Donate_now_Confirmation_DD_buttonDiv{
+display: none;
+}
+.formh3 {
+	font-size: 17px;
+	color: #E06F1D;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	margin-top: 20px;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+	padding-top: 30px;
+}
+
+.scrollbox {
+	border: 1px solid #EAEAEA;
+	padding: 8px;
+	width: 95%;
+	margin-bottom: 3.5em;
+}
+
+/*For challenge pages disclaimers*/
+
+.innerscroll
+
+  {
+	padding: 8px;
+	height: 150px;
+	overflow: scroll;
+	width: 97%;
+	margin-top: 10px;
+}
+.innerscroll        p              {
+	font-size: 13px;
+}
+.termsandcond     li {
+	font-size: 1em;
+	line-height: 1.3em;
+
+}
+
+.scrollbox   h3   {
+	font-weight: bolder;
+	font-size: 14px;
+	background-color: #EAEAEA;
+	margin-top: 0px;
+	padding: 7px;
+}
+.scrollbox  ol {
+	font-size: 13px;
+}
+#Height_Bike_SizeDiv, #Dietary_requirementsDiv {margin-top: 15px;}
+/*#I_have_read_the_Medical_DisclaimerDiv  strong, #I_have_read_the_Terms_and_ConditionsDiv strong {
+	color: #E06F1D;
+}*/
+#I_have_read_the_Medical_DisclaimerDiv .eaFormElementLabel a, #I_have_read_the_Terms_and_ConditionsDiv .eaFormElementLabel a {
+	color: #E06F1D;!important
+	text-decoration: none;
+}
+#I_have_read_the_Medical_DisclaimerDiv .eaFormElementLabel a:hover, #I_have_read_the_Terms_and_ConditionsDiv .eaFormElementLabel a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+#Card_LogosDiv {margin-bottom: 10px;}
+.userdetails {
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #CCCCCC;
+}
+#Team_Member_1_First_NameDiv strong, #Team_Member_2_First_NameDiv strong, #Team_Member_3_First_NameDiv strong, #Team_Member_4_First_NameDiv strong, #Team_Member_5_First_NameDiv strong, #Team_Leader_First_NameDiv strong {color:  #e06f1d;}
+
+#TitleDiv {margin-top: 15px;}
+.clear {clear: both;}
+#Generic_team-pg1-headingDiv, #Generic_team-pg2-headingDiv, #Generic_team-pg3-headingDiv {margin-bottom: 30px;}
+#Where_did_you_hearDiv {padding-top: 20px;}
+.clearfix {display: inline-block;}
+#SMS_opt_inDiv {clear: both;}
+#Email_opt_inDiv label, #SMS_opt_inDiv label {font-size: 0.9em;}
+
+
+
+
+
+@media screen and (max-width: 1050px), screen and (max-device-width: 1050px)
+{
+
+#Direct_Debit_AmountDiv .eaFormElementLabel, #Donation_AmountDiv .eaFormElementLabel, #Recurring_PaymentDiv .eaFormElementLabel {
+    width: 100%;
+}
+#OtherInput, #otherInput {top: 54px; left: 350px;}
+}
+@media screen and (max-width: 700px), screen and (max-device-width: 700px)
+{
+.eaFormField, .eaQuestionTextfieldFormFieldContainer, .eaQuestionSelectFormFieldContainer, .eaQuestionTextareaFormFieldContainer {
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 865px), screen and (max-device-width: 865px)
+{
+
+.eaFormElementLabel, .eaQuestionLabel {
+    width: 100%;
+}
+.eaQuestionTextfieldFormFieldContainer {float:left;width:90%;}
+#SMS_opt_inDiv {padding-top: 1em;}
+
+.eaFormTextfield, .eaFormSelect, .eaQuestionTextfield  {
+ width: 90%;
+}
+
+#Donation_AmountDiv br {display: none;}
+}
+/*Hide logos on wider screens */
+@media screen and (max-width: 720px), screen and (max-device-width: 720px)
+{
+
+#Direct_Debit_AmountDiv .eaFormRadio label, #Donation_AmountDiv .eaFormRadio label {
+    margin-right: 0px;
+   width: 90%;}
+   
+   #OtherInput, #otherInput {
+    position: static;
+    margin-top: -20px;
+    width: 91%;
+}
+}
+
+@media screen and (max-width: 640px), screen and (max-device-width: 640px)
+{
+.en_left_wrapper, .en_right_wrapper, .copyright-text, #footer ul.menu  {width: 100%; float: none; margin-top: .5em;}
+   #OtherInput, #otherInput {
+    margin-top: 0px;
+}
+#footer ul.menu li {
+    padding-left: 0px;
+    margin-left: 0px;
+    display: block;
+	border: 0px;
+}
+
+.eaContactNameContainer {display: none!important;}
+div.eaContactBiographyContainer {width: 100%!important; float: none;}
+div.eaContactBiographyContainer img {width: 100%; max-width: 220px}
+.speech-bubble:after {
+  left: 35%;
+}
+
+.container {
+width: 96%;
+}
+.right-column, .secure {display: none;}
+.card-logos img {width: 10%; height: auto; margin-right: 3px;}
+#Donation_AmountDiv, #Direct_Debit_AmountDiv {	border: none;
+	border-radius: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	height: auto;
+	margin-bottom: 10px;
+	padding-top: 5px;}
+	#Payment_TypeDiv {clear: both;}
+	h2.dd-progress {display: none;}
+	.start-date {padding-top: 20px;
+border-top: 1px solid #ccc;}
+}
+@media screen and (max-width: 480px), screen and (max-device-width: 480px)
+{
+#bank-statement  .half {
+	width: 100%;
+}
+.bank-row {
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.content {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#otherInput, #OtherInput {
+    margin-top: -10px;
+}
+#Postcode_lookupDiv {
+    left: 185px;
+}
+.eaFormElementLabel, #Donation_AmountDiv .eaFormElementLabel, #Recurring_PaymentDiv .eaFormElementLabel {
+    width: 100%;
+}
+/*
+#Donation_AmountDiv .eaFormField, #Recurring_PaymentDiv .eaFormField {
+    width: 130%;
+}*/
+.eaFormField, .eaQuestionTextfieldFormFieldContainer, .eaQuestionTextfieldFormFieldContainer, .eaQuestionTextareaFormFieldContainer   {
+   width: 95%;
+}
+.eaFormTextfield, .eaFormSelect, .eaQuestionSelect, .eaQuestionTextfield  {
+ width: 85%;
+margin-bottom: 10px;
+}
+
+#Gift_Aid_TickboxDiv .eaFormElementLabel, #Gift_Aid_TickboxDiv .eaFormField {
+  width: 90%;
+margin-top: 20px;}
+#Donation_AmountDiv, #Direct_Debit_AmountDiv  {  width: 100%;}
+.eaFormRadio {
+    font-size: .85em;
+}
+
+}
+@media screen and (max-width: 768px) {
+
+#breadcrumbs {display:none;}
+#menu {
+	width:50px;
+	display: block;
+	font-size:1.35em;
+	text-align: center;
+	height: 50px;
+	float: right;
+	padding-top: 1.5em;
+}
+#care-menu.js {
+display: none;
+}
+#thankyou #care-menu a {
+	color: #fff;
+}
+#thankyou #care-menu a:hover {
+	color: #fff;
+}
+#thankyou  #care-menu ul {
+	padding: 0px;
+	list-style-type: none;
+	float: none;
+	width: 100%;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+/*li {
+width:100%;
+border-right:none;
+margin-bottom: 5px;
+margin-left: 10px;
+}*/
+}
+@media screen and (max-width: 380px), screen and (max-device-width: 380px)
+{
+#Donation_AmountDiv .eaFormField, #Recurring_PaymentDiv .eaFormField {
+    width: 100%;
+}
+#thankyou  #logo {
+	width: 50%;
+}
+#thankyou  #logo img{
+	width: 100%; height: auto;
+}
+}
+@media screen and (min-width: 768px) {
+#menu {
+display: none;
+}
+}
+@media screen and (min-width: 641px)
+{
+.secure-mobile {display: none;}
+}
+.eaErrorMessageList {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
