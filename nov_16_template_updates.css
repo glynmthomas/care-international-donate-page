@@ -489,7 +489,7 @@ margin-right: auto;}
 /* text label */
 	
 	.eaFormElementLabel, .eaQuestionLabel {
-	width: 30%;
+	width: 100%;
 float: left;
 position: relative;
 margin-left: 0px;
@@ -499,7 +499,7 @@ font-size: 1.05em;
 clear: both;
  }
  #Donation_AmountDiv .eaFormElementLabel, #Recurring_PaymentDiv .eaFormElementLabel{
-width: 25%;
+width: 100%;
 }
 
  
